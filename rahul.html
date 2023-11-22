@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: #222;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #111;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
+    .sidebar.show {
+      left: 0;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Web Developer</p>
+  </header>
+
+  <nav>
+    <a href="#" id="menu-toggle">Menu</a>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <!-- Add more navigation links as needed -->
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <!-- Add more sidebar links as needed -->
+  </div>
+
+  <div class="main-content">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Insert your personal details and description here.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Include information about your projects here.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your.email@example.com</p>
+      <p>Phone: +1234567890</p>
+      <!-- You can add more contact details or a contact form here -->
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <img src="C:\Users\Admin\Desktop\download.jpg" alt="Image 1">
+      <img src="C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+      <!-- Add more images for your gallery -->
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
